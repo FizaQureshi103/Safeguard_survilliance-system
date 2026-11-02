@@ -1,0 +1,397 @@
+/* USERS PAGE*/
+.users-page {
+    width: 100%;
+    min-height: 100%;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+/* HEADER */
+.users-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.users-header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+}
+/* ADD USER BUTTON */
+
+.add-user-btn {
+    height: 34px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #23406c;
+    border-radius: 5px;
+    background: #0d1b31;
+    color: #5b9cff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-user-btn svg {
+    font-size: 12px;
+}
+
+.add-user-btn:hover {
+    background: #142849;
+    border-color: #367cf5;
+}
+/* USER CARD */
+
+.users-card {
+    width: 100%;
+    /* background: #0c1728; */
+    border: 1px solid #182c46;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+/* TABLE WRAPPER */
+.users-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.users-table-wrapper::-webkit-scrollbar {
+    height: 5px;
+}
+
+.users-table-wrapper::-webkit-scrollbar-track {
+    background: #0a1422;
+}
+
+.users-table-wrapper::-webkit-scrollbar-thumb {
+    background: #263c5a;
+    border-radius: 10px;
+}
+
+
+/*  TABLE */
+
+.users-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+}
+
+
+.users-table thead {
+    background: #0d192a;
+}
+
+.users-table th {
+    height: 58px;
+    padding: 6px 15px;
+    color: #74859e;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    border-bottom: 1px solid #182c46;
+}
+
+/* Column sizes */
+.users-table th:nth-child(1) {
+    width: 17%;
+}
+
+.users-table th:nth-child(2) {
+    width: 22%;
+}
+
+.users-table th:nth-child(3) {
+    width: 18%;
+}
+
+.users-table th:nth-child(4) {
+    width: 13%;
+}
+
+.users-table th:nth-child(5) {
+    width: 19%;
+}
+
+.users-table th:nth-child(6) {
+    width: 11%;
+}
+
+.users-table tbody tr {
+    height: 50px;
+    transition: background 0.2s ease;
+}
+
+.users-table tbody tr:hover {
+    background: #101e31;
+}
+
+.users-table tbody tr:not(:last-child) {
+    border-bottom: 1px solid rgba(28, 46, 69, 0.55);
+}
+
+.users-table td {
+    padding: 7px 10px;
+    font-size: 14px;
+    color: #8c9bb0;
+    vertical-align: middle;
+}
+
+.user-name {
+    color: #dce4ef;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.user-email {
+    color: #8998ad;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.user-role {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+.user-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 7.5px;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+/* Active */
+.user-status.active {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+.user-status.active .status-dot {
+    background: #22c55e;
+}
+
+/* Inactive */
+.user-status.inactive {
+    color: #ef4444;
+    font-size: 14px;
+}
+
+.user-status.inactive .status-dot {
+    background: #ef4444;
+}
+
+.last-login {
+    color: #8998ad;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-actions button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+
+/* Edit */
+
+.user-edit-btn {
+    color: #8d9bad;
+}
+
+.user-edit-btn:hover {
+    color: #4da3ff;
+
+    transform: scale(1.15);
+}
+
+
+/* Delete */
+
+.user-delete-btn {
+    color: #e94a57;
+}
+
+.user-delete-btn:hover {
+    color: #ff6873;
+    transform: scale(1.15);
+}
+
+
+/*MODAL OVERLAY*/
+
+.user-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(2, 8, 18, 0.76);
+    backdrop-filter: blur(5px);
+}
+
+/* MODAL */
+.user-modal {
+    width: 100%;
+    max-width: 500px;
+    background: #101827;
+    border: 1px solid #263852;
+    border-radius: 15px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+.user-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 22px;
+    border-bottom: 1px solid #20324b;
+}
+
+.user-modal-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 19px;
+}
+
+.user-modal-header p {
+    margin: 6px 0 0;
+    color: #8493a8;
+    font-size: 12px;
+}
+
+.user-modal-close {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #293b55;
+    border-radius: 7px;
+    background: #141f31;
+    color: #94a3b8;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-modal-close:hover {
+    color: #ffffff;
+    background: #1b2a40;
+}
+
+.user-form {
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.user-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.user-form-group label {
+    color: #aab6c8;
+    font-size: 12px;
+}
+
+.user-form-group input,
+.user-form-group select {
+    width: 100%;
+    height: 40px;
+    padding: 0 11px;
+    box-sizing: border-box;
+    border: 1px solid #293b55;
+    border-radius: 8px;
+    outline: none;
+    background: #0c1524;
+    color: #e8edf5;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.user-form-group input::placeholder {
+    color: #596a82;
+}
+
+.user-form-group input:focus,
+.user-form-group select:focus {
+    border-color: #3575ed;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.user-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 16px;
+    margin-top: 3px;
+    border-top: 1px solid #20324b;
+}
+
+.user-cancel-btn,
+.user-save-btn {
+    height: 38px;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.user-cancel-btn {
+    border: 1px solid #293b55;
+    background: transparent;
+    color: #9aa8bb;
+}
+
+.user-cancel-btn:hover {
+    color: #ffffff;
+    background: #172235;
+}
+
+.user-save-btn {
+    border: none;
+    background: #2860dd;
+    color: #ffffff;
+}
+
+.user-save-btn:hover {
+    background: #3470ee;
+}

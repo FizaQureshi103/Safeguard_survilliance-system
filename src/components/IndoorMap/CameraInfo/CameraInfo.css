@@ -1,0 +1,61 @@
+.camera-info{
+    background:#14213D;
+    border-radius:18px;
+    padding:20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.camera-info h3{
+    color:white;
+    margin-bottom:10px;
+}
+.camera-info h4{
+    color:#CBD5E1;
+    margin-bottom:20px;
+}
+.camera-data{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-bottom:24px;
+}
+.camera-data div{
+    display:flex;
+    justify-content:space-between;
+}
+
+.camera-data span{
+    color:#94A3B8;
+}
+
+.camera-data strong{
+    color:white;
+    margin-left: 50px;
+}
+.online{
+    color:#22C55E;
+}
+.offline{
+   color: red !important;
+   background: transparent !important;
+}
+
+.camera-info button{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#2563EB;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.camera-info button:hover{
+    background:#1D4ED8;
+}

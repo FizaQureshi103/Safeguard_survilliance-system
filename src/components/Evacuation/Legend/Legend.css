@@ -1,0 +1,41 @@
+.evacuation-legend-card{
+    background:#14213D;
+    border-radius:18px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.08);
+    width:100%;
+    box-sizing:border-box;
+
+}
+
+.evacuation-legend-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    gap: 30px;
+}
+.evacuation-legend-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.evacuation-legend-icon{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:15px;
+}
+
+.legend-title,
+.evacuation-legend-item span{
+    color:#CBD5E1;
+    font-size:18px;
+    font-weight: 400;
+}

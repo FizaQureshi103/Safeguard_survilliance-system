@@ -1,0 +1,68 @@
+.map-card{
+    position:relative;
+    width:100%;
+    background:#14213D;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.map-image{
+    width:100%;
+    display:block;
+    transition: transform .3s ease;
+    transform-origin: center center;
+}
+
+.zoom-controls{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    background: #14213D;;
+}
+
+.zoom-controls button{
+    width:44px;
+    height:44px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#2563EB;
+    color:white;
+
+    font-size:24px;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.camera-marker{
+
+    position:absolute;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:#2563EB;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 15px rgba(37,99,235,.5);
+    transition:.3s;
+}
+.camera-marker.active{
+    background: #22c55e;
+    transform: translate(-50%, -50%) scale(1.25);
+    box-shadow: 0 0 15px rgba(34, 197, 94, .6);
+}
+/* .camera-marker:hover{
+    transform:translate(-50%,-50%) scale(1.15);
+    background:#3B82F6;
+} */

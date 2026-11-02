@@ -1,0 +1,58 @@
+.route-controls{
+    background:#14213D;
+    border-radius:18px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.route-controls h3{
+    color:#fff;
+    font-weight: 600;
+}
+
+.control-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.control-group label{
+    color:#CBD5E1;
+    font-size:13px;
+}
+
+.control-group select{
+    height:46px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    background:#0c1728;
+    padding:0 14px;
+    cursor:pointer;
+}
+select{
+    color: white;
+    background: #0f172a;
+}
+
+select option{
+    background: #0f172a;
+    color: #fff;
+}
+.route-controls button{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#2563EB;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.route-controls button:hover{
+
+    background:#1D4ED8;
+
+}

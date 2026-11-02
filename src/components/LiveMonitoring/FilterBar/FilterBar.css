@@ -1,0 +1,144 @@
+.filter-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+    min-width: 0;
+    margin-top: 0;
+}
+
+
+.camera-search {
+    height: 48px;
+    width: min(320px, 100%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    background: #101D33;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 11px;
+    color: #64748B;
+    transition: 0.25s ease;
+}
+
+.camera-search:focus-within {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.camera-search svg {
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.camera-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #E2E8F0;
+    font-size: 14px;
+}
+.camera-search input::placeholder {
+    color: #64748B;
+}
+
+.floor-select select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background: #101D33;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 11px;
+    color: #CBD5E1;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.floor-select select:focus {
+    border-color: #3B82F6;
+}
+
+.floor-select option {
+    background: #101D33;
+    color: #E2E8F0;
+}
+
+.view-buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-buttons button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: #101D33;
+    color: #64748B;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.view-buttons button:hover {
+    color: #E2E8F0;
+    border-color: #3B82F6;
+}
+
+.view-buttons button.active {
+    background: #2563EB;
+    border-color: #2563EB;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+
+    .filter-bar {
+        flex-wrap: wrap;
+    }
+
+    .camera-search {
+        flex: 1;
+
+        min-width: 220px;
+    }
+
+    .floor-select {
+        width: 170px;
+    }
+
+    .view-buttons {
+        margin-left: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .camera-search {
+        width: 100%;
+    }
+
+    .floor-select {
+        flex: 1;
+
+        width: auto;
+    }
+
+    .view-buttons {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+
+}

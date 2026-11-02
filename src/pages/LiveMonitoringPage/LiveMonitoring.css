@@ -1,0 +1,46 @@
+.live-monitoring-page {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    /* padding: 0 30px 35px; */
+    overflow-x: hidden;
+}
+
+.live-camera-section {
+    width: 100%;
+    min-width: 0;
+    animation: fadeUp 0.45s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .live-monitoring-page {
+        padding: 0 25px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .live-monitoring-page {
+        padding: 0 18px 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .live-monitoring-page {
+        padding: 0 14px 20px;
+    }
+
+}

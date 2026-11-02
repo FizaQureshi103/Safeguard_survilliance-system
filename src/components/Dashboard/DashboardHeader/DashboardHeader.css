@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+    margin-top: 0;
+ 
+}
+
+.header-left h1{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.header-left p{
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+
+/* Date */
+ .date{
+    color: #94a3b8;
+    font-size: 14px;
+    background: #0c1728;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px;
+} 

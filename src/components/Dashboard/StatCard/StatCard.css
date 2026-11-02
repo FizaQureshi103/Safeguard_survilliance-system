@@ -1,0 +1,198 @@
+.stat-card {
+    background: #101D33;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #2563EB;
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.18);
+}
+
+.stat-card.highlighted {
+    border: 2px solid #3B82F6;
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.45);
+
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+
+.stat-details {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.stat-details h4 {
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    margin: 0 0 10px 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-details h2 {
+    color: #FFFFFF;
+
+    font-size: 34px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin: 0 0 12px 0;
+}
+
+.card-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+.success {
+    color: #10B981;
+}
+
+.warning {
+    color: #F59E0B;
+}
+
+.danger {
+    color: #EF4444;
+}
+
+
+@media (max-width: 1200px) {
+
+    .stat-card {
+        padding: 20px;
+
+        gap: 16px;
+    }
+
+    .stat-icon {
+        width: 58px;
+        height: 58px;
+
+        min-width: 58px;
+
+        font-size: 25px;
+    }
+
+    .stat-details h4 {
+        font-size: 15px;
+    }
+
+    .stat-details h2 {
+        font-size: 30px;
+    }
+
+    .card-status {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .stat-card {
+        padding: 18px;
+
+        gap: 14px;
+    }
+
+    .stat-icon {
+        width: 54px;
+        height: 54px;
+
+        min-width: 54px;
+
+        border-radius: 14px;
+
+        font-size: 23px;
+    }
+
+    .stat-details h4 {
+        font-size: 14px;
+    }
+
+    .stat-details h2 {
+        font-size: 28px;
+    }
+
+    .card-status {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .stat-card {
+        padding: 18px;
+
+        gap: 16px;
+    }
+
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+
+        min-width: 52px;
+
+        border-radius: 13px;
+
+        font-size: 22px;
+    }
+
+    .stat-details h4 {
+        font-size: 14px;
+
+        margin-bottom: 8px;
+    }
+
+    .stat-details h2 {
+        font-size: 26px;
+
+        margin-bottom: 10px;
+    }
+
+    .card-status {
+        font-size: 12px;
+    }
+}

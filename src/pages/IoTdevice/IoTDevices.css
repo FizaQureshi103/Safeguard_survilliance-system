@@ -1,0 +1,477 @@
+/*DEVICE MANAGEMENT PAGE */
+.iot-devices-page {
+    width: 100%;
+    min-height: 100%;
+    color: #ffffff;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+/* STATISTICS*/
+.device-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+/* STAT CARD */
+.device-stat-card {
+    min-width: 0;
+    height: 116px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background:#101D33;
+    border:1px solid rgba(255,255,255,.08);
+    border-left: 4px solid #3B82F6;
+    border-radius: 18px;
+    box-sizing: border-box;
+
+}
+
+/* STAT CARD LEFT BORDER COLORS */
+.device-stat-card:nth-child(1) {
+    border-left-color: #3B82F6; /* Total Devices */
+}
+
+.device-stat-card:nth-child(2) {
+    border-left-color: #00E676; /* Online */
+}
+
+.device-stat-card:nth-child(3) {
+    border-left-color: #FF4D5A; /* Offline */
+}
+
+.device-stat-card:nth-child(4) {
+    border-left-color: #FF8A00; /* Alerts */
+}
+
+/* STAT ICON */
+
+.stat-icon {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+/* Total */
+.total-icon {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.14);
+}
+
+/* Online */
+.online-icon {
+    color: #00e676;
+    background: rgba(0, 230, 118, 0.12);
+}
+
+/* Offline */
+
+.offline-icon {
+    color: #ff4d5a;
+    background: rgba(255, 77, 90, 0.12);
+}
+
+/* Alerts */
+.alert-icon {
+    color: #ff8a00;
+    background: rgba(255, 138, 0, 0.12);
+}
+
+/* STAT CONTENT*/
+
+.stat-content {
+    min-width: 0;
+}
+
+.stat-content h2 {
+    margin: 0 0 2px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-content span {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/*  DEVICE REGISTRY*/
+
+.device-registry {
+    width: 100%;
+    background:#101D33;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+    padding: 26px 24px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* REGISTRY HEADER */
+
+.registry-header {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #20324b;
+}
+
+.registry-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+/* ADD DEVICE BUTTON */
+.add-device-btn {
+    border: none;
+    outline: none;
+    height: 42px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 11px;
+    background: #2860dd;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.add-device-btn svg {
+    font-size: 14px;
+}
+
+.add-device-btn:hover {
+    background: #3470ee;
+    transform: translateY(-1px);
+}
+
+.add-device-btn:active {
+    transform: translateY(0);
+}
+
+/* TABLE WRAPPER */
+
+.device-table-wrapper {
+    width: 100%;
+    max-height: 310px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* Scrollbar */
+.device-table-wrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.device-table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.device-table-wrapper::-webkit-scrollbar-thumb {
+    background: #34445b;
+    border-radius: 10px;
+}
+
+.device-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #465a75;
+}
+
+/* TABLE */
+.device-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* .device-table thead {
+    background: #101827;
+} */
+
+.device-table th {
+    height: 80px;
+    padding: 14px 18px;
+    color: #71829d;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.2px;
+    vertical-align: middle;
+    border-bottom: 1px solid #20324b;
+}
+
+/* Column widths */
+.device-table th:nth-child(1) {
+    width: 9%;
+}
+
+.device-table th:nth-child(2) {
+    width: 14%;
+}
+
+.device-table th:nth-child(3) {
+    width: 12%;
+}
+
+.device-table th:nth-child(4) {
+    width: 14%;
+}
+
+.device-table th:nth-child(5) {
+    width: 11%;
+}
+
+.device-table th:nth-child(6) {
+    width: 18%;
+}
+
+.device-table th:nth-child(7) {
+    width: 11%;
+}
+
+.device-table th:nth-child(8) {
+    width: 11%;
+}
+
+
+.device-table tbody tr {
+    height: 86px;
+    transition: background 0.2s ease;
+}
+
+
+.device-table tbody tr:hover {
+    background: #18263b;
+}
+
+.device-table td {
+    padding: 14px 18px;
+    color: #94a3b8;
+    font-size: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(32, 50, 75, 0.45);
+}
+
+.device-id {
+    color: #3b9cff;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.device-name {
+    color: #f1f5f9;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+
+.device-type {
+    color: #9aa8bb;
+    line-height: 1.4;
+}
+
+.device-location {
+    color: #9aa8bb;
+    line-height: 1.4;
+}
+
+.device-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Online */
+
+.device-status.online {
+    color: #00e676;
+}
+
+.device-status.online .status-dot {
+    background: #00e676;
+}
+
+
+/* Offline */
+.device-status.offline {
+    color: #ff4d5a;
+}
+
+.device-status.offline .status-dot {
+    background: #ff4d5a;
+}
+
+
+.ip-address {
+    color: #94a3b8;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.last-seen {
+    color: #94a3b8;
+    line-height: 1.45;
+}
+
+.device-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.device-actions button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Edit */
+.edit-btn {
+    color: #35a8ff;
+}
+
+.edit-btn:hover {
+    color: #65bdff;
+    transform: scale(1.15);
+}
+
+
+/* Delete */
+.delete-btn {
+    color: #ff4d5a;
+}
+
+.delete-btn:hover {
+    color: #ff737c;
+    transform: scale(1.15);
+}
+
+
+@media (max-width: 1200px) {
+
+    .device-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .iot-devices-header h1 {
+        font-size: 24px;
+    }
+
+    .device-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .device-stat-card {
+        height: 100px;
+    }
+
+    .device-registry {
+        padding: 20px 16px 0;
+    }
+
+    .registry-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .registry-header h2 {
+        font-size: 19px;
+    }
+
+    .add-device-btn {
+        padding: 0 14px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .iot-devices-header h1 {
+        font-size: 22px;
+    }
+
+    .iot-devices-header p {
+        font-size: 13px;
+    }
+
+    .device-stat-card {
+        padding: 16px;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 19px;
+    }
+
+    .stat-content h2 {
+        font-size: 26px;
+    }
+
+    .stat-content span {
+        font-size: 14px;
+    }
+
+    .registry-header {
+        flex-direction: column;
+    }
+
+    .add-device-btn {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,51 @@
+export const initialThreatOverview = [
+  {
+    day: "Aug 1",
+    fire: 18,
+    weapon: 12,
+    missingChild: 5,
+    snatching: 9,
+  },
+  {
+    day: "Aug 2",
+    fire: 25,
+    weapon: 16,
+    missingChild: 8,
+    snatching: 12,
+  },
+  {
+    day: "Aug 3",
+    fire: 22,
+    weapon: 14,
+    missingChild: 7,
+    snatching: 11,
+  },
+  {
+    day: "Aug 4",
+    fire: 35,
+    weapon: 24,
+    missingChild: 12,
+    snatching: 15,
+  },
+  {
+    day: "Aug 5",
+    fire: 28,
+    weapon: 20,
+    missingChild: 9,
+    snatching: 13,
+  },
+  {
+    day: "Aug 6",
+    fire: 30,
+    weapon: 22,
+    missingChild: 10,
+    snatching: 14,
+  },
+  {
+    day: "Aug 7",
+    fire: 38,
+    weapon: 27,
+    missingChild: 13,
+    snatching: 17,
+  },
+];

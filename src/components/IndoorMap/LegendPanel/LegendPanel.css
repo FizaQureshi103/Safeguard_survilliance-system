@@ -1,0 +1,67 @@
+.indoor-legend-card{
+
+    background:#14213D;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    /* margin-bottom:20px; */
+
+}
+
+.indoor-legend-card h3{
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+.indoor-legend-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.indoor-legend-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.indoor-legend-icon{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.indoor-legend-item span{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}

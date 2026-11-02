@@ -1,0 +1,92 @@
+.dashboard-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard-subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 24px;
+    align-items: stretch;
+}
+
+/* Both cards same height */
+.charts-grid > * {
+    min-width: 0;
+    height: 320px;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+/* Important:
+   Prevent children from creating horizontal overflow
+*/
+.bottom-grid > * {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .bottom-grid > * {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .bottom-grid > * {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid > * {
+        height: 340px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .charts-grid {
+        gap: 15px;
+    }
+
+    .charts-grid > * {
+        height: auto;
+        min-height: 320px;
+    }
+}

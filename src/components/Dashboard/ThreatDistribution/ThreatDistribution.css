@@ -1,0 +1,171 @@
+.threat-distribution {
+    background: #101D33;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    width: 100%;
+    min-height: 100%;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.threat-distribution-header {
+    flex-shrink: 0;
+}
+
+.threat-distribution-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.threat-distribution-header p {
+    margin: 6px 0 0;
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+.distribution-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    min-width: 0;
+}
+
+.distribution-chart {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.distribution-center {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.distribution-center strong {
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.distribution-center span {
+    color: #94A3B8;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.distribution-legend {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    min-width: 0;
+}
+
+.distribution-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+
+.distribution-item-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.distribution-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+
+.distribution-item-left span:last-child {
+    color: #E2E8F0;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.distribution-value {
+    color: #94A3B8;
+    font-size: 11px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+
+    .distribution-main {
+        gap: 12px;
+    }
+
+    .distribution-chart {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .distribution-main {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .distribution-chart {
+        width: 180px;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+    .distribution-legend {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .threat-distribution {
+        padding: 18px;
+    }
+
+    .distribution-main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .distribution-chart {
+        width: 170px;
+        height: 170px;
+    }
+
+    .distribution-legend {
+        width: 100%;
+    }
+}
