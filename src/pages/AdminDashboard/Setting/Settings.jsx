@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 import { toast } from "react-hot-toast";
-import DashboardLayout from "../../components/Dashboard/Layout/DashboardLayout";
+import DashboardLayout from "../../../components/Dashboard/Layout/DashboardLayout";
 import "./Settings.css";
 
 function Settings() {

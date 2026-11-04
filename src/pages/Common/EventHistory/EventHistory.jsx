@@ -1,37 +1,52 @@
+
 import "./EventHistory.css";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import { eventHistoryData } from "../../data/EventHistory/eventHistoryData";
-import AlertPagination from '../../components/Alerts/AlertPagination/AlertPagination';
-import DashboardLayout from "../../components/Dashboard/Layout/DashboardLayout";
+import { useLocation } from "react-router-dom";
+
+import { eventHistoryData } from "../../../data/EventHistory/eventHistoryData";
+import AlertPagination from "../../../components/Alerts/AlertPagination/AlertPagination";
+import DashboardLayout from "../../../components/Dashboard/Layout/DashboardLayout";
 
 function EventHistory() {
+    const location = useLocation();
+    const isUser = location.pathname.startsWith("/user");
+
+    // Demo: Officer's assigned cameras
+    const assignedCameraIds = ["CAM-01", "CAM-04"];
+
+    // Role-based events
+    const roleBasedEvents = isUser
+        ? eventHistoryData.filter((item) =>
+            assignedCameraIds.includes(item.camera)
+          )
+        : eventHistoryData;
+
     const [selectedType, setSelectedType] = useState("All Types");
     const [selectedFloor, setSelectedFloor] = useState("Ground Floor");
     const [selectedDate, setSelectedDate] = useState("");
     const [searchQuery, setSearchQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
-    const filteredEvents = eventHistoryData.filter((item) => {
+    const filteredEvents = roleBasedEvents.filter((item) => {
 
-    const matchType =
-        selectedType === "All Types" ||
-        item.event === selectedType;
+        const matchType =
+            selectedType === "All Types" ||
+            item.event === selectedType;
 
-    const matchFloor =
-        selectedFloor === "All Floors" ||
-        item.floor === selectedFloor;
+        const matchFloor =
+            selectedFloor === "All Floors" ||
+            item.floor === selectedFloor;
 
-    const matchDate =
-        !selectedDate ||
-        item.date === selectedDate;
+        const matchDate =
+            !selectedDate ||
+            item.date === selectedDate;
 
-    const query = searchQuery.toLowerCase();
+        const query = searchQuery.toLowerCase();
 
-    const matchSearch =
-        item.event.toLowerCase().includes(query) ||
-        item.camera.toLowerCase().includes(query) ||
-        item.location.toLowerCase().includes(query);
+        const matchSearch =
+            item.event.toLowerCase().includes(query) ||
+            item.camera.toLowerCase().includes(query) ||
+            item.location.toLowerCase().includes(query);
 
         return (
             matchType &&
@@ -44,12 +59,13 @@ function EventHistory() {
     const eventsPerPage = 5;
     const lastIndex = currentPage * eventsPerPage;
     const firstIndex = lastIndex - eventsPerPage;
-    const paginatedEvents = filteredEvents.slice(firstIndex, lastIndex);
-    
 
-    const navigate = useNavigate();
+    const paginatedEvents = filteredEvents.slice(
+        firstIndex,
+        lastIndex
+    );
 
-    return ( 
+    return (
         <DashboardLayout>
             <div className="event-history-page">
 
@@ -82,7 +98,6 @@ function EventHistory() {
                         <option>Snatching Detected</option>
                     </select>
 
-
                     <select
                         value={selectedFloor}
                         onChange={(e) => {
@@ -95,7 +110,6 @@ function EventHistory() {
                         <option>First Floor</option>
                         <option>Second Floor</option>
                     </select>
-
 
                     <input
                         type="date"
@@ -145,7 +159,6 @@ function EventHistory() {
 
                                     return (
                                         <tr key={item.id}>
-
                                             <td>
                                                 <div className="event-date">
                                                     <strong>{item.date}</strong>
@@ -174,24 +187,20 @@ function EventHistory() {
 
                                             <td>
                                                 <span
-                                                    className={`history-status ${
-                                                        item.status.toLowerCase().replace(" ", "-")
-                                                    }`}
+                                                    className={`history-status ${item.status.toLowerCase().replace(" ", "-")}`}
                                                 >
                                                     {item.status}
                                                 </span>
                                             </td>
-
                                         </tr>
                                     );
                                 })
                             )}
                         </tbody>
-
                     </table>
                 </div>
 
-                <AlertPagination 
+                <AlertPagination
                     currentPage={currentPage}
                     setCurrentPage={setCurrentPage}
                     alertsPerPage={eventsPerPage}
@@ -199,7 +208,7 @@ function EventHistory() {
                 />
 
             </div>
-         </DashboardLayout>
+        </DashboardLayout>
     );
 }
 

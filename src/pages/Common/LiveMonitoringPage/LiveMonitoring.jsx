@@ -1,27 +1,39 @@
+
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-import DashboardLayout from "../../components/Dashboard/Layout/DashboardLayout";
-import FilterBar from "../../components/LiveMonitoring/FilterBar/FilterBar";
-import CameraGrid from "../../components/LiveMonitoring/CameraGrid/CameraGrid";
-import SingleCameraView from "../../components/LiveMonitoring/SingleCameraView/SingleCameraView";
+import DashboardLayout from "../../../components/Dashboard/Layout/DashboardLayout";
+import FilterBar from "../../../components/LiveMonitoring/FilterBar/FilterBar";
+import CameraGrid from "../../../components/LiveMonitoring/CameraGrid/CameraGrid";
+import SingleCameraView from "../../../components/LiveMonitoring/SingleCameraView/SingleCameraView";
 
-import { cameraData } from "../../data/LiveMonitoring/cameraData";
+import { cameraData } from "../../../data/LiveMonitoring/cameraData";
 
 import "./LiveMonitoring.css";
 
 function LiveMonitoring() {
+    const location = useLocation();
 
-    const navigate = useNavigate();
+    const isUser = location.pathname.startsWith("/user");
 
     const [selectedCamera, setSelectedCamera] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedFloor, setSelectedFloor] = useState("All Floors");
     const [viewMode, setViewMode] = useState("grid");
 
-    // Search + Floor Filter
-    const filteredCameras = cameraData.filter((camera) => {
+    // DEMO: Camera IDs assigned to this security officer
+    // Replace these with actual logged-in officer assignments later.
+    const assignedCameraIds = ["CAM-01", "CAM-04"];
 
+    // Role-based camera access
+    const roleBasedCameras = isUser
+        ? cameraData.filter(camera =>
+            assignedCameraIds.includes(camera.cameraId)
+          )
+        : cameraData;
+
+    // Search + Floor Filter
+    const filteredCameras = roleBasedCameras.filter((camera) => {
         const search = searchTerm.toLowerCase();
 
         const matchesSearch =
@@ -47,7 +59,7 @@ function LiveMonitoring() {
     return (
         <DashboardLayout>
             <main className="live-monitoring-page">
-                {/* FILTER BAR  */}
+
                 <FilterBar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
@@ -57,9 +69,7 @@ function LiveMonitoring() {
                     setViewMode={setViewMode}
                 />
 
-                {/* CAMERAS ONLY*/}
                 <section className="live-camera-section">
-
                     <CameraGrid
                         cameras={filteredCameras}
                         viewMode={viewMode}
@@ -67,13 +77,13 @@ function LiveMonitoring() {
                     />
                 </section>
 
-                {/* SINGLE CAMERA */}
                 {selectedCamera && (
                     <SingleCameraView
                         camera={selectedCamera}
                         onClose={handleCloseCamera}
                     />
                 )}
+
             </main>
         </DashboardLayout>
     );

@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 
 import "./IoTDevices.css";
-import DeviceModal from "../../components/IoTDevice/DeviceModal";
-import DashboardLayout from "../../components/Dashboard/Layout/DashboardLayout";
+import DeviceModal from "../../../components/IoTDevice/DeviceModal";
+import DashboardLayout from "../../../components/Dashboard/Layout/DashboardLayout";
 
 function IoTDevices() {
     const [modalOpen, setModalOpen] = useState(false);

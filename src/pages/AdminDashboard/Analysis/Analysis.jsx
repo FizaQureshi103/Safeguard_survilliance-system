@@ -1,5 +1,5 @@
 import "./Analysis.css";
-import DashboardLayout from "../../components/Dashboard/Layout/DashboardLayout";
+import DashboardLayout from "../../../components/Dashboard/Layout/DashboardLayout";
 
 import {
   ResponsiveContainer,
