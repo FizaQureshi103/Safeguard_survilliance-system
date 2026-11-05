@@ -47,7 +47,7 @@ function IndoorMap() {
     );
 
     return (
-        <DashboardLayout>
+        <DashboardLayout  role={isUser ? "user" : "admin"}>
 
             <div className="indoor-map-page">
 

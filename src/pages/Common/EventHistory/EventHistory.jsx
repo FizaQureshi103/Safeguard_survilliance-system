@@ -66,7 +66,7 @@ function EventHistory() {
     );
 
     return (
-        <DashboardLayout>
+        <DashboardLayout  role={isUser ? "user" : "admin"}>
             <div className="event-history-page">
 
                 {/* Filters */}

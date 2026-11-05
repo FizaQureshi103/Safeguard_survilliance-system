@@ -57,7 +57,7 @@ function LiveMonitoring() {
     };
 
     return (
-        <DashboardLayout>
+        <DashboardLayout role={isUser ? "user" : "admin"}>
             <main className="live-monitoring-page">
 
                 <FilterBar

@@ -47,7 +47,7 @@ function Evacuation() {
     };
 
     return (
-        <DashboardLayout>
+        <DashboardLayout  role={isUser ? "user" : "admin"}>
             <div className="evacuation-page">
                 <div className="evacuation-layout">
 

@@ -14,8 +14,8 @@ import AlertPagination from "../../../components/Alerts/AlertPagination/AlertPag
 import IncidentDetailModal from "../../../components/Alerts/IncidentDetailModal/IncidentDetailModal";
 
 function Alerts() {
-    const location = useLocation();
 
+    const location = useLocation();
     const isUser = location.pathname.startsWith("/user");
 
     const [selectedType, setSelectedType] = useState("All Types");
@@ -89,7 +89,7 @@ function Alerts() {
     );
 
     return (
-        <DashboardLayout>
+        <DashboardLayout  role={isUser ? "user" : "admin"}>
 
             <div className="alerts-page">
 
