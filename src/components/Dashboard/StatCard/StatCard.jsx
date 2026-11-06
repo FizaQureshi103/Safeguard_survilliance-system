@@ -9,7 +9,7 @@ function StatCard({
   value,
   icon,
   color,
-  change,
+  description,
   status,
   highlighted,
 }) {
@@ -47,9 +47,9 @@ function StatCard({
         </h2>
 
         <div className={`card-status ${status}`}>
-          {isDanger ? <FaArrowUp /> : <FaArrowDown />}
+          {/* {isDanger ? <FaArrowUp /> : <FaArrowDown />} */}
 
-          <span>{change}</span>
+          <span>{description}</span>
         </div>
 
       </div>

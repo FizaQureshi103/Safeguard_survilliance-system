@@ -1,0 +1,133 @@
+
+.user-assigned-areas {
+  width: 100%;
+}
+
+.assigned-areas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.assigned-areas-header h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.assigned-areas-header p {
+  color: #94A3B8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.assigned-areas-header button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  color: #3B82F6;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.assigned-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.assigned-area-card {
+  background: #101D33;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 22px;
+  transition: 0.3s ease;
+}
+
+.assigned-area-card:hover {
+  border-color: #2563EB;
+  box-shadow: 0 8px 25px rgba(37,99,235,0.12);
+}
+
+.assigned-area-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.assigned-area-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59,130,246,0.15);
+  color: #3B82F6;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.camera-online {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #22C55E;
+  font-size: 12px;
+}
+
+.online-dot {
+  width: 7px;
+  height: 7px;
+  background: #22C55E;
+  border-radius: 50%;
+}
+
+.assigned-area-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+
+.assigned-area-floor {
+  color: #94A3B8;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.assigned-area-camera {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #3B82F6;
+  font-size: 14px;
+}
+
+.camera-label {
+  color: #94A3B8;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .assigned-areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .assigned-area-card {
+    padding: 18px;
+  }
+
+  .assigned-areas-header h2 {
+    font-size: 18px;
+  }
+}

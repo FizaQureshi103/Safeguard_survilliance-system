@@ -89,7 +89,7 @@ function Alerts() {
     );
 
     return (
-        <DashboardLayout  role={isUser ? "user" : "admin"}>
+        <DashboardLayout role={isUser ? "user" : "admin"}>
 
             <div className="alerts-page">
 
