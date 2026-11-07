@@ -9,7 +9,7 @@ import SystemHealth from '../../../components/Dashboard/SystemHealth/SystemHealt
 
 function DashBoardPage(){
     return(
-        <DashboardLayout>
+        <DashboardLayout role = "admin">
             
             <DashboardHeader />
             

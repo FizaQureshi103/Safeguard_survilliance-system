@@ -1,0 +1,189 @@
+
+/* System Health Panel */
+.user-panel.system-health-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 22px;
+  background: #101D33;
+  border: 1px solid #1E293B;
+  border-radius: 14px;
+  box-sizing: border-box;
+  color: #F8FAFC;
+}
+.user-panel.system-health-panel:hover{
+  border-color:#2563EB;
+  box-shadow:0 10px 30px rgba(37,99,235,.18);
+}
+/* Header */
+.user-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.user-panel-heading h2 {
+  margin: 0 0 6px;
+  color: #F8FAFC;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-panel-heading p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 13px;
+}
+
+/* Status List */
+.system-status-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.system-status-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #26364D;
+  min-width: 0;
+}
+
+.system-status-item:first-child {
+  padding-top: 0;
+}
+
+.system-status-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Service Icons */
+.system-status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63px;
+  height: 63px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  font-size: 23px;
+  transition: transform 0.3s ease;
+}
+
+/* Camera - Blue */
+.system-status-icon.assigned-cameras {
+  color: #3B82F6;
+  background: rgba(59, 130, 246, 0.16);
+}
+
+/* AI Detection - Purple */
+.system-status-icon.ai-detection {
+  color: #A855F7;
+  background: rgba(139, 92, 246, 0.17);
+}
+
+/* Database - Orange */
+.system-status-icon.database {
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+/* Network - Cyan */
+.system-status-icon.network {
+  color: #06B6D4;
+  background: rgba(6, 182, 212, 0.15);
+}
+
+.system-status-item:hover .system-status-icon {
+  transform: translateY(-3px);
+}
+
+/* Service Details */
+.system-status-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.system-status-info h3 {
+  margin: 0 0 5px;
+  color: #F8FAFC;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.system-status-info p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Status Badge */
+.system-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.system-status-badge > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.system-status-badge.status-healthy {
+  color: #10B981;
+}
+
+.system-status-badge.status-healthy > span {
+  background: #10B981;
+}
+
+.system-status-badge.status-warning {
+  color: #F59E0B;
+}
+
+.system-status-badge.status-warning > span {
+  background: #F59E0B;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .user-panel.system-health-panel {
+    padding: 16px;
+  }
+
+  .user-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .system-status-item {
+    gap: 10px;
+  }
+
+  .system-status-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .system-status-info h3 {
+    font-size: 12px;
+  }
+
+  .system-status-info p {
+    font-size: 11px;
+  }
+
+  .system-status-badge {
+    font-size: 11px;
+  }
+}

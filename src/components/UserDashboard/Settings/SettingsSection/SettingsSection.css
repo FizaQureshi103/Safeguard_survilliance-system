@@ -1,0 +1,60 @@
+.user-settings-section {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 15px;
+  background: #101d33;
+  box-sizing: border-box;
+}
+
+.user-settings-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.user-settings-section-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: rgba(59, 130, 246, 0.13);
+  color: #60a5fa;
+  font-size: 18px;
+}
+
+.user-settings-section-header h2 {
+  margin: 0 0 6px;
+  color: #f8fafc;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.user-settings-section-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.user-settings-section-content {
+  padding-top: 5px;
+}
+
+@media (max-width: 550px) {
+  .user-settings-section {
+    padding: 19px 16px;
+  }
+
+  .user-settings-section-header {
+    align-items: flex-start;
+  }
+
+  .user-settings-section-header h2 {
+    font-size: 15px;
+  }
+}

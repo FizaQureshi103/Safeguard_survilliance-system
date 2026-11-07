@@ -15,13 +15,9 @@ function DashboardHeader(){
     return(
         <header>
             <div className="header-left">
-                <h1>
-                    Dashboard
-                </h1>
+                <h1> Dashboard </h1>
 
-                <p>
-                    Overview of your security system
-                </p>
+                <p>Overview of your security system</p>
             </div>
 
             <div className="header-right">

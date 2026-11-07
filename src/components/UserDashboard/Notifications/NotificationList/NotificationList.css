@@ -1,0 +1,76 @@
+
+/* Notification List */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Empty State */
+.notification-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px;
+  text-align: center;
+}
+
+.notification-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.12);
+  color: #3B82F6;
+  font-size: 23px;
+}
+
+.notification-empty h3 {
+  margin: 0 0 8px;
+  color: #F8FAFC;
+  font-size: 16px;
+}
+
+.notification-empty p {
+  margin: 0 0 15px;
+  color: #94A3B8;
+  font-size: 12px;
+}
+
+.notification-empty button {
+  padding: 8px 13px;
+  border: 1px solid #2563EB;
+  border-radius: 7px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #60A5FA;
+  cursor: pointer;
+}
+
+/* Footer */
+.notification-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 22px;
+  border-top: 1px solid #26364D;
+  color: #64748B;
+  font-size: 11px;
+}
+
+.notification-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .notification-footer {
+    padding: 13px 16px;
+  }
+}

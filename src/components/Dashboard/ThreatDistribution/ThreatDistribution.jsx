@@ -11,26 +11,24 @@ import {
 import { useThreatDistribution } from "../../../context/ThreatDistributionContext.jsx";
 
 
-function ThreatDistribution() {
-
+function ThreatDistribution({ data }) {
   const { distributionData } = useThreatDistribution();
 
-  const total = distributionData.reduce(
+  // User dashboard uses props; Admin uses context data
+  const chartData = data ?? distributionData;
+
+  const total = chartData.reduce(
     (sum, item) => sum + item.value,
     0
   );
-
 
   return (
     <div className="threat-distribution">
 
       {/* Header */}
       <div className="threat-distribution-header">
-
         <h2>Alerts by Type</h2>
-
         <p>This Week</p>
-
       </div>
 
 
@@ -45,7 +43,7 @@ function ThreatDistribution() {
             <PieChart>
 
               <Pie
-                data={distributionData}
+                data={chartData}
                 dataKey="value"
                 nameKey="title"
                 cx="50%"
@@ -56,7 +54,7 @@ function ThreatDistribution() {
                 stroke="none"
               >
 
-                {distributionData.map((item) => (
+                {chartData.map((item) => (
                   <Cell
                     key={item.id}
                     fill={item.color}
@@ -78,23 +76,17 @@ function ThreatDistribution() {
 
           </ResponsiveContainer>
 
-
           {/* Center */}
           <div className="distribution-center">
-
             <strong>{total}</strong>
-
             <span>Total</span>
-
           </div>
-
         </div>
-
 
         {/* Legend */}
         <div className="distribution-legend">
 
-          {distributionData.map((item) => {
+          {chartData.map((item) => {
 
             const percentage =
               total === 0

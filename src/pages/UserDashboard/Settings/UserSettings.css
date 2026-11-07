@@ -1,0 +1,248 @@
+.user-settings-page {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 25px;
+  color: #f8fafc;
+}
+
+/* HEADER */
+
+.user-settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.user-settings-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-settings-title-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 13px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  font-size: 21px;
+}
+
+.user-settings-title h1 {
+  margin: 0 0 7px;
+  color: #f8fafc;
+  font-size: 25px;
+  font-weight: 650;
+}
+
+.user-settings-title p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* SETTINGS CONTENT */
+
+.user-settings-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+}
+
+/* Make notification section full width */
+.user-settings-content > :first-child {
+  grid-column: 1 / -1;
+}
+
+/* FOOTER */
+
+.user-settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 21px;
+  border-top: 1px solid rgba(148, 163, 184, 0.13);
+}
+
+.user-settings-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.user-settings-reset-btn,
+.user-settings-cancel-btn,
+.user-settings-save-btn {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 17px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.user-settings-reset-btn {
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.07);
+  color: #f87171;
+}
+
+.user-settings-reset-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.user-settings-cancel-btn {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #101d33;
+  color: #cbd5e1;
+}
+
+.user-settings-cancel-btn:hover {
+  background: #1e293b;
+}
+
+.user-settings-save-btn {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.user-settings-save-btn:hover {
+  background: #3b82f6;
+  transform: translateY(-1px);
+}
+
+/* MESSAGE */
+
+.user-settings-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 13px 16px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.user-settings-message.success {
+  background: rgba(34, 197, 94, 0.07);
+  color: #4ade80;
+}
+
+.user-settings-message.error {
+  border-color: rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.07);
+  color: #f87171;
+}
+
+/* DISPLAY PREFERENCES */
+
+.user-settings-page.settings-compact-mode .user-settings-section {
+  padding: 17px;
+}
+
+.user-settings-page.settings-compact-mode .user-setting-toggle-row {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.user-settings-page.settings-reduce-motion *,
+.user-settings-page.settings-reduce-motion *::before,
+.user-settings-page.settings-reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+}
+
+.user-settings-page[data-font-size="small"] {
+  font-size: 13px;
+}
+
+.user-settings-page[data-font-size="medium"] {
+  font-size: 14px;
+}
+
+.user-settings-page[data-font-size="large"] {
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .user-settings-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .user-settings-content > :first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-settings-page {
+    padding: 20px 14px;
+  }
+
+  .user-settings-title {
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .user-settings-title-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .user-settings-title h1 {
+    font-size: 22px;
+  }
+
+  .user-settings-title p {
+    font-size: 12px;
+  }
+
+  .user-settings-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .user-settings-footer-actions {
+    width: 100%;
+  }
+
+  .user-settings-footer-actions button,
+  .user-settings-reset-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .user-settings-footer-actions {
+    flex-direction: column;
+  }
+
+  .user-settings-footer-actions button,
+  .user-settings-reset-btn {
+    width: 100%;
+  }
+}

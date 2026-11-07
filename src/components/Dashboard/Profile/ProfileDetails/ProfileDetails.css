@@ -1,0 +1,242 @@
+.admin-profile-details-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 30px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 18px;
+  background: #0c1728;
+  color: #f8fafc;
+}
+
+.profile-details-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.profile-details-heading h2 {
+  margin: 0 0 8px;
+  color: #f8fafc;
+  font-size: 22px;
+}
+
+.profile-details-heading p,
+.profile-security-heading p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.details-heading-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  font-size: 18px;
+}
+
+.profile-details-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 18px;
+  margin-top: 30px;
+}
+
+.profile-detail-field {
+  min-width: 0;
+}
+
+.profile-detail-field label {
+  display: block;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-detail-input-wrapper {
+  min-width: 0;
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 13px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 10px;
+  background: #101d33;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-detail-input-wrapper.is-editing {
+  border-color: rgba(59, 130, 246, 0.55);
+}
+
+.profile-detail-input-wrapper:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.profile-detail-field-icon {
+  flex-shrink: 0;
+  color: #60a5fa;
+  font-size: 15px;
+}
+
+.profile-detail-input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f1f5f9;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.profile-detail-input-wrapper input::placeholder {
+  color: #64748b;
+}
+
+.profile-detail-input-wrapper input:read-only {
+  cursor: default;
+}
+
+.field-edit-indicator {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.profile-details-divider {
+  height: 1px;
+  margin: 32px 0;
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.profile-security-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.security-heading-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  font-size: 17px;
+}
+
+.profile-security-heading h3 {
+  margin: 0 0 6px;
+  color: #f8fafc;
+  font-size: 17px;
+}
+
+.password-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 23px;
+  padding: 17px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  background: #101d33;
+}
+
+.password-detail-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.password-detail-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+}
+
+.password-detail-info > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.password-detail-info strong {
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.password-detail-info span {
+  color: #94a3b8;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.change-password-action {
+  border: none;
+  background: transparent;
+  color: #60a5fa;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.change-password-action:hover {
+  color: #93c5fd;
+}
+
+.profile-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 20px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile-security-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #4ade80;
+}
+
+@media (max-width: 650px) {
+  .admin-profile-details-card {
+    padding: 22px 18px;
+  }
+
+  .profile-details-fields {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    margin-top: 24px;
+  }
+
+  .password-detail-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .change-password-action {
+    padding-left: 52px;
+  }
+}

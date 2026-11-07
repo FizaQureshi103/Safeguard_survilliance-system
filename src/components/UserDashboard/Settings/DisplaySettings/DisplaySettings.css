@@ -1,0 +1,41 @@
+
+.user-display-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.user-display-option-icon {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  font-size: 14px;
+}
+
+.user-display-option-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-display-option-content .user-setting-toggle-row {
+  padding: 17px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 450px) {
+  .user-display-option {
+    gap: 9px;
+  }
+
+  .user-display-option-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}

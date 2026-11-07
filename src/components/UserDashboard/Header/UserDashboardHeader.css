@@ -7,7 +7,7 @@
 
 .user-dashboard-header h1 {
   color: #ffffff;
-  font-size: 26px;
+  font-size: 24px;
   margin: 0 0 8px;
 }
 
@@ -16,15 +16,14 @@
   margin: 0;
   font-size: 14px;
 }
-
-.user-dashboard-header button {
-  background: #2563eb;
-  color: #ffffff;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-}
+ .date{
+    color: #94a3b8;
+    font-size: 14px;
+    background: #0c1728;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px;
+} 
 
 @media (max-width: 600px) {
   .user-dashboard-header {

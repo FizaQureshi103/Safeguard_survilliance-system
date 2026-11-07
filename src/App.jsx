@@ -9,14 +9,17 @@ import LoginForm from './pages/AuthPage/LoginForm';
 
 // Admin Dashboard
 import DashBoardPage from './pages/AdminDashboard/DashBoard/DashBoardPage.jsx';
-import Profile from './components/Dashboard/Profile/Profile';
 import IoTDevices from './pages/AdminDashboard/IoTdevice/IoTDevices';
 import Users from './components/User/Users';
 import Settings from './pages/AdminDashboard/Setting/Settings';
 import Analysis from './pages/AdminDashboard/Analysis/Analysis.jsx';
+import AdminProfile from './pages/AdminDashboard/AdminProfile/AdminProfile.jsx';
 
 // User Dashboard
 import UserDashboard from './pages/UserDashboard/Dashboard/UserDashboard';
+import UserNotifications from "./pages/UserDashboard/Notifications/UserNotifications";
+import UserProfile from './pages/UserDashboard/UserProfile/UserProfile.jsx';
+import UserSettings from "./pages/UserDashboard/Settings/UserSettings";
 
 // Common Pages
 import LiveMonitoring from './pages/Common/LiveMonitoringPage/LiveMonitoring';
@@ -67,7 +70,7 @@ function App() {
         {/* ADMIN DASHBOARD ROUTES */}
         <Route path="/dashboard" element={<DashBoardPage />} />
         <Route path="/users" element={<Users />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<AdminProfile />} />
         <Route path="/iotdevice" element={<IoTDevices />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/analysis" element={<Analysis />} />
@@ -82,7 +85,10 @@ function App() {
 
         {/* USER DASHBOARD ROUTES */}
         <Route path="/user/dashboard" element={<UserDashboard />} />
-
+        <Route path="/user/notifications" element={<UserNotifications />}/>
+        <Route path="/user/profile" element={<UserProfile />}/>
+        <Route path="/user/settings" element={<UserSettings />}/>
+ 
         {/* USER - COMMON PAGES */}
         <Route path="/user/livemonitoring" element={<LiveMonitoring />} />
         <Route path="/user/alert" element={<Alerts />} />

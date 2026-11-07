@@ -5,6 +5,16 @@ import "./UserDashboardHeader.css";
 function UserDashboardHeader() {
   const navigate = useNavigate();
 
+    const today = new Date();
+
+    const date = today.toLocaleDateString('en-GB',{
+        weekday: 'long',
+        day: 'numeric',
+        month:"long",
+        year:'numeric'
+    });
+
+
   return (
     <div className="user-dashboard-header">
       <div>
@@ -14,9 +24,15 @@ function UserDashboardHeader() {
         </p>
       </div>
 
-      <button onClick={() => navigate("/user/alert")}>
+        <div className="header-right">
+            <div className="date">
+                {date}
+            </div>
+        </div>
+
+      {/* <button onClick={() => navigate("/user/alert")}>
         View All Alerts
-      </button>
+      </button> */}
     </div>
   );
 }

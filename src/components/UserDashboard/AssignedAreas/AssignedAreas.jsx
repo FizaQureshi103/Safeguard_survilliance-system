@@ -1,7 +1,11 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaMapMarkerAlt, FaVideo, FaArrowRight } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaVideo,
+  FaArrowRight,
+} from "react-icons/fa";
 
 import { assignedAreas } from "../../../data/UserDashboard/assignedAreas";
 import "./AssignedAreas.css";
@@ -25,34 +29,45 @@ function AssignedAreas() {
 
       <div className="assigned-areas-grid">
 
-        {assignedAreas.map((area) => (
-          <div className="assigned-area-card" key={area.id}>
+        {assignedAreas.map((area) => {
+          const isOnline = area.status?.toLowerCase() === "online";
 
-            <div className="assigned-area-top">
-              <div className="assigned-area-icon">
-                <FaMapMarkerAlt />
+          return (
+            <div className="assigned-area-card" key={area.id}>
+
+              {/* Left Side: Location Details */}
+              <div className="assigned-area-left">
+
+                <div className="assigned-area-icon">
+                  <FaMapMarkerAlt />
+                </div>
+
+                <div className="assigned-area-details">
+
+                  <h3>{area.name}</h3>
+
+                  <p className="assigned-area-floor">
+                    {area.floor} · {area.location}
+                  </p>
+
+                  <div className="assigned-area-camera">
+                    <FaVideo />
+                    <span>{area.camera}</span>
+                  </div>
+
+                </div>
+
               </div>
 
-              <span className="camera-online">
-                <span className="online-dot"></span>
-                {area.status}
-              </span>
+              {/* Right Side: Camera Status */}
+              <div className={`camera-status ${isOnline ? "online" : "offline"}`}>
+                <span className="status-dot"></span>
+                <span>{isOnline ? "Online" : "Offline"}</span>
+              </div>
+
             </div>
-
-            <h3>{area.name}</h3>
-
-            <p className="assigned-area-floor">
-              {area.floor} · {area.location}
-            </p>
-
-            <div className="assigned-area-camera">
-              <FaVideo />
-              <span>{area.camera}</span>
-              <span className="camera-label">Assigned Camera</span>
-            </div>
-
-          </div>
-        ))}
+          );
+        })}
 
       </div>
     </section>

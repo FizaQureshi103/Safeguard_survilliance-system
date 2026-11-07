@@ -1,0 +1,63 @@
+/* Summary Cards */
+.notification-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.notification-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 20px;
+  background: #101D33;
+  border: 1px solid #1E293B;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.notification-summary-card:hover {
+  border-color: #2563EB;
+  transform: translateY(-2px);
+}
+
+.notification-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 19px;
+}
+
+.notification-summary-icon.total {
+  color: #3B82F6;
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.notification-summary-icon.unread {
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.notification-summary-icon.threats {
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.notification-summary-card span {
+  display: block;
+  margin-bottom: 7px;
+  color: #94A3B8;
+  font-size: 12px;
+}
+
+.notification-summary-card h3 {
+  margin: 0;
+  color: #F8FAFC;
+  font-size: 23px;
+  font-weight: 700;
+}

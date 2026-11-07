@@ -1,8 +1,8 @@
 export const initialThreatOverview = [
   {
     day: "Aug 1",
-    fire: 18,
-    weapon: 12,
+    fire: 5,
+    weapon: 8,
     missingChild: 5,
     snatching: 9,
   },

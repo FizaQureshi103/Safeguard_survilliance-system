@@ -1,0 +1,138 @@
+
+/* Main Page */
+.user-profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  color: #F8FAFC;
+  box-sizing: border-box;
+}
+
+/* Page Header */
+.profile-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.profile-page-header h1 {
+  margin: 0 0 7px;
+  color: #F8FAFC;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.profile-page-header p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 13px;
+}
+
+/* Header Buttons */
+.profile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-edit-btn,
+.profile-save-btn,
+.profile-cancel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profile-edit-btn,
+.profile-save-btn {
+  border: 1px solid #2563EB;
+  background: #2563EB;
+  color: #FFFFFF;
+}
+
+.profile-edit-btn:hover,
+.profile-save-btn:hover {
+  background: #1D4ED8;
+  border-color: #1D4ED8;
+}
+
+.profile-cancel-btn {
+  border: 1px solid #334155;
+  background: #101D33;
+  color: #CBD5E1;
+}
+
+.profile-cancel-btn:hover {
+  border-color: #64748B;
+  color: #FFFFFF;
+}
+
+/* Profile Layout */
+.user-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Message */
+.profile-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.profile-message.success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10B981;
+}
+
+.profile-message.error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #F87171;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .user-profile-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .user-profile-page {
+    gap: 18px;
+  }
+
+  .profile-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-page-header h1 {
+    font-size: 21px;
+  }
+
+  .profile-header-actions {
+    width: 100%;
+  }
+
+  .profile-header-actions button {
+    flex: 1;
+  }
+}
